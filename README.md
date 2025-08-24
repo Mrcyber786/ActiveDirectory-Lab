@@ -1,87 +1,84 @@
-# Active Directory Home Lab (VirtualBox)
+# Active Directory Home Lab Project
 
-This project demonstrates how I set up a Windows Server 2019 environment in VirtualBox to configure **Active Directory Domain Services (AD DS)**, networking services, and domain management.  
+This project demonstrates the setup and configuration of a Windows Server 2019 Active Directory lab environment using VirtualBox.  
+The lab includes configuring a Domain Controller (DC), Active Directory Domain Services (AD DS), DHCP, and Routing/NAT.  
 
-The goal of this lab was to practice deploying a domain controller, creating administrative accounts, and configuring core services like DHCP and NAT that are commonly found in enterprise environments.
+📂 All screenshots documenting the setup process are included in the **Screenshots** folder of this repository.  
 
 ---
 
 ## Project Overview
-- **Platform:** Oracle VirtualBox  
-- **Server OS:** Windows Server 2019 (Domain Controller)  
-- **Services Configured:**  
-  - Active Directory Domain Services (AD DS)  
-  - DHCP  
-  - Routing and Remote Access Service (RRAS) with NAT  
-- **Key Skills Demonstrated:**  
-  - Server installation and configuration  
-  - Network setup (static IPs, NAT)  
-  - Domain administration  
-  - User/Group management  
+
+The purpose of this lab is to showcase practical hands-on experience with:
+- Installing and configuring Windows Server 2019 in VirtualBox  
+- Setting up a Domain Controller with AD DS  
+- Creating and managing domain administrator accounts  
+- Configuring network services such as DHCP and NAT  
+- Preparing a functional environment that simulates enterprise IT infrastructure  
 
 ---
 
-## Steps and Screenshots
+## Steps Completed
 
-### Step 1: Windows Server Setup
-I installed Windows Server 2019 in VirtualBox and completed the initial configuration to prepare the server as a Domain Controller.  
-
-![Windows Server Setup](Screenshots/01.png)  
-![Windows Server Setup](Screenshots/02.png)  
-![Windows Server Setup](Screenshots/03.png)  
+### 1. VirtualBox Setup
+- Installed and configured a new Virtual Machine in **VirtualBox**.  
+- Allocated resources (RAM, CPU, disk space) for the Windows Server.  
+- Configured networking for the VM to support domain and client communication.  
 
 ---
 
-### Step 2: Configure Static IP for Domain Controller
-A Domain Controller requires a static IP address to ensure network stability and proper DNS resolution.  
-I configured the IPv4 settings on the server.  
-
-![Configure Static IP](Screenshots/04.png)  
+### 2. Windows Server Installation
+- Installed **Windows Server 2019** on the VirtualBox VM.  
+- Performed the initial setup, including administrator password configuration and updates.  
 
 ---
 
-### Step 3: Install Active Directory Domain Services (AD DS)
-Using **Server Manager → Add Roles and Features**, I installed the Active Directory Domain Services role to enable domain management.  
-
-![Install AD DS](Screenshots/05.png)  
-![Install AD DS](Screenshots/06.png)  
-![Install AD DS](Screenshots/07.png)  
-![Install AD DS](Screenshots/08.png)  
+### 3. Configure Static IP for Domain Controller
+- Assigned a **static IP address** to the Domain Controller to ensure reliable communication within the network.  
+- Configured DNS to point to the DC itself.  
 
 ---
 
-### Step 4: Create a Domain Administrator Account
-After setting up AD DS, I created a new **domain administrator account** inside Active Directory Users and Computers (ADUC).  
-This account was added to the **Domain Admins** group for management tasks.  
-
-![Create Admin Account](Screenshots/09.png)  
-![Create Admin Account](Screenshots/10.png)  
+### 4. Install Active Directory Domain Services (AD DS)
+- Used the **Add Roles and Features Wizard** to install AD DS.  
+- Promoted the server to a **Domain Controller**.  
+- Created a new forest and root domain for the lab environment.  
 
 ---
 
-### Step 5: Install Routing and Remote Access with NAT
-To provide internet access to the domain, I installed **Routing and Remote Access (RRAS)** and configured **Network Address Translation (NAT)**.  
-
-![Install RRAS](Screenshots/11.png)  
-![Install NAT](Screenshots/12.png)  
+### 5. Create Domain Admin Account
+- Added a new **administrator account** within Active Directory Users and Computers (ADUC).  
+- Verified domain authentication by logging in with the new account.  
 
 ---
 
-### Step 6: Configure DHCP Server
-Finally, I installed the **DHCP Server role** and created a DHCP scope to automatically assign IP addresses to domain clients.  
+### 6. Install Routing and Remote Access (RRAS) with NAT
+- Installed **Routing and Remote Access Services** through Server Manager.  
+- Configured **Network Address Translation (NAT)** to allow client VMs to access the internet via the Domain Controller.  
 
-![Install DHCP](Screenshots/13.png)  
-![Configure DHCP Scope](Screenshots/14.png)  
+---
+
+### 7. Configure DHCP Server
+- Installed the **DHCP role** on the Domain Controller.  
+- Created and configured a **DHCP scope** to dynamically assign IP addresses to client machines.  
+- Authorized the DHCP server in AD DS.  
 
 ---
 
 ## Conclusion
-This lab gave me practical experience in building an enterprise-style Windows Server environment in a virtualized lab. I practiced:  
-- Installing and configuring Windows Server  
-- Deploying Active Directory Domain Services  
-- Managing domain users and permissions  
-- Setting up networking with NAT and DHCP  
 
-These are the same core skills IT administrators use to manage real-world Windows Server environments.
+This lab project demonstrates a full setup of a small-scale enterprise IT environment, including:  
+- Active Directory Domain Services (AD DS)  
+- Domain administration  
+- DHCP and NAT services  
+- VirtualBox-based virtualization  
+
+The project highlights practical system administration skills applicable to real-world IT and cybersecurity roles.  
+
+---
+
+## Repository Contents
+- **README.md** → Project documentation (this file)  
+- **Screenshots/** → Folder containing step-by-step screenshots of the setup process  
 
 ---
