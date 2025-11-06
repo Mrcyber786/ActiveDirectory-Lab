@@ -3,7 +3,7 @@
 This project demonstrates the setup and configuration of a Windows Server 2019 Active Directory lab environment using VirtualBox.  
 The lab includes configuring a Domain Controller (DC), Active Directory Domain Services (AD DS), DHCP, and Routing/NAT.  
 
-📂 All screenshots documenting the setup process are included in the **Screenshots** folder of this repository.  
+ All screenshots documenting the setup process are included in the **Screenshots** folder of this repository.  
 
 ---
 
